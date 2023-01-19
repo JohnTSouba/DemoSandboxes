@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h2>Visitors</h2>
+<h3>Enter your name:</h3>
+<form action="/visitor" method="post">
+    Visitor Name: <input name="visitorName"/> <br/>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<h3>Visitors</h3>
+    <p th:each="visitor : ${visitors}">
+     <span th:text="${visitor}"></span>
+    </p>
+
+</body>
+</html>
+
